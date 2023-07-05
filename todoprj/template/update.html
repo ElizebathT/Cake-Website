@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>FORM</title>
+    </head>
+    <body>
+        <div style="margin: 10%;">
+        <form method="POST">
+            {% csrf_token %}
+            {{form.as_table}}
+            <button type="submit" >UPDATE</button>
+           
+        </form>
+    </div>
+    </body>
+</html>

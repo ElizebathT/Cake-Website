@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>FORM</title>
+    </head>
+    <body>
+        <div style="margin: 10%;">
+        <form method="POST">
+            {% csrf_token %}
+            <label>TASK NAME: </label>
+            <input type="text" name="name"><br>
+            <label>TASK DESCRIPTION</label>
+            <input type="text" name="description"><br>
+            <button type="submit" >SUBMIT</button>
+            <a href="{% url 'table' %}" type="button" >View</a>
+        </form>
+    </div>
+    </body>
+</html>

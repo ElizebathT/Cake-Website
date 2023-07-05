@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>TABLE</title>
+    </head>
+    <body>
+        <table style="margin: 10%;">
+            <tr>
+                <th>Task</th>
+                <th>Description</th>
+            </tr>
+            {% for i in name %}
+            <tr>
+                <td>{{i.name}}</td>
+                <td>{{i.description}}</td>
+                <td><button><a href="{% url 'update' i.id %}">UPDATE</a></button></td>
+                <td><button><a href="{% url 'delete' i.id %}">DELETE</a></button></td>
+            </tr>
+            {% endfor %}
+            
+        </table>
+        
+    </body>
+</html>
